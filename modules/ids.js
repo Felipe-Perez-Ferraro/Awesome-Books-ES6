@@ -1,0 +1,9 @@
+export const booksContainer = document.getElementById('booksContainer');
+export const nameInpt = document.getElementById('nameInpt');
+export const authorInpt = document.getElementById('authorInpt');
+export const submitBtn = document.getElementById('submitBtn');
+export const bookForm = document.getElementById('bookForm');
+export const menuOpen = document.getElementById('menuOpen');
+export const list = document.getElementById('List');
+export const addNew = document.getElementById('AddNew');
+export const contact = document.getElementById('Contact');
