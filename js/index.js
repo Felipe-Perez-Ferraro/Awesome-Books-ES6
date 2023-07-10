@@ -6,10 +6,10 @@ import {
 import { DateTime } from '../modules/luxon.js';
 
 // Show Date
-const showDate = ()=> {
-    const currentDate = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
-    document.getElementById('clock').innerHTML = currentDate;
-}
+const showDate = () => {
+  const currentDate = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+  document.getElementById('clock').innerHTML = currentDate;
+};
 showDate();
 
 // Listeners
@@ -19,7 +19,7 @@ submitBtn.addEventListener('click', (ev) => {
   aBook.addBook();
   printBooksToUI();
   bookForm.reset();
-  showDate()
+  showDate();
 });
 
 booksContainer.addEventListener('click', (el) => {
@@ -56,7 +56,7 @@ links.forEach((e) => {
 });
 
 // Navbar
-menuOpen.addEventListener('click', ()=> {
-    toggleMenu();
-    showDate();
+menuOpen.addEventListener('click', () => {
+  toggleMenu();
+  showDate();
 });
