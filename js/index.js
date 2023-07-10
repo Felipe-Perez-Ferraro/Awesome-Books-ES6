@@ -3,6 +3,14 @@ import toggleMenu from '../modules/navbar.js';
 import {
   authorInpt, booksContainer, bookForm, nameInpt, submitBtn, menuOpen, list, addNew, contact,
 } from '../modules/ids.js';
+import { DateTime } from '../modules/luxon.js';
+
+// Show Date
+const showDate = ()=> {
+    const currentDate = DateTime.now().toLocaleString(DateTime.DATETIME_MED);
+    document.getElementById('clock').innerHTML = currentDate;
+}
+showDate();
 
 // Listeners
 submitBtn.addEventListener('click', (ev) => {
@@ -11,11 +19,13 @@ submitBtn.addEventListener('click', (ev) => {
   aBook.addBook();
   printBooksToUI();
   bookForm.reset();
+  showDate()
 });
 
 booksContainer.addEventListener('click', (el) => {
   const rBook = new Books(Math.random, nameInpt.value, authorInpt.value);
   rBook.removeBook(el);
+  showDate();
 });
 
 // Navigation Links
@@ -26,6 +36,7 @@ contact.style.display = 'none';
 
 links.forEach((e) => {
   e.addEventListener('click', (el) => {
+    showDate();
     toggleMenu();
     el.preventDefault();
     if (el.target.classList.contains('list')) {
@@ -45,4 +56,7 @@ links.forEach((e) => {
 });
 
 // Navbar
-menuOpen.addEventListener('click', toggleMenu);
+menuOpen.addEventListener('click', ()=> {
+    toggleMenu();
+    showDate();
+});
