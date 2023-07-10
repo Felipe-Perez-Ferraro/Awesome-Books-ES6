@@ -16,7 +16,9 @@
     "eol-last": "off",
     "import/extensions": [ 1, {
       "js": "always", "json": "always"
-    }]
+    }],
+    "no-sequences": ["error", { "allowInParentheses": true }],
+    "class-methods-use-this": ["error", { "exceptMethods": ["addBook", "removeBook"] }]
   },
   "ignorePatterns": [
     "dist/",
