@@ -42,24 +42,24 @@ export class Books {
     this.title = title;
     this.author = author;
   }
+}
 
-  addBook() {
-    if (nameInpt.value === '' || authorInpt.value === '') {
-      errorMessage.style.display = 'block';
-    } else {
-      const newBook = new Books(books.length, nameInpt.value, authorInpt.value);
-      books = [...books, newBook];
-      errorMessage.style.display = 'none';
-    }
+export const addBook = () => {
+  if (nameInpt.value === '' || authorInpt.value === '') {
+    errorMessage.style.display = 'block';
+  } else {
+    const newBook = new Books(books.length, nameInpt.value, authorInpt.value);
+    books = [...books, newBook];
+    errorMessage.style.display = 'none';
   }
+}
 
-  removeBook(el) {
-    if (el.target.classList.contains('removeBook')) {
-      const bookId = Number(el.target.getAttribute('data-id'));
-      const newBooks = books.filter((item) => item.id !== bookId);
-      books = newBooks;
-      printBooksToUI();
-    }
+export const removeBook = (el) => {
+  if (el.target.classList.contains('removeBook')) {
+    const bookId = Number(el.target.getAttribute('data-id'));
+    const newBooks = books.filter((item) => item.id !== bookId);
+    books = newBooks;
+    printBooksToUI();
   }
 }
 
