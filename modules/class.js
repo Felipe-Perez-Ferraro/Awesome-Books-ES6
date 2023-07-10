@@ -52,7 +52,7 @@ export const addBook = () => {
     books = [...books, newBook];
     errorMessage.style.display = 'none';
   }
-}
+};
 
 export const removeBook = (el) => {
   if (el.target.classList.contains('removeBook')) {
@@ -61,7 +61,7 @@ export const removeBook = (el) => {
     books = newBooks;
     printBooksToUI();
   }
-}
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   const data = JSON.parse(localStorage.getItem('books')) || [];

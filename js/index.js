@@ -1,4 +1,6 @@
-import { Books, printBooksToUI, addBook, removeBook } from '../modules/class.js';
+import {
+  Books, printBooksToUI, addBook, removeBook,
+} from '../modules/class.js';
 import toggleMenu from '../modules/navbar.js';
 import {
   authorInpt, booksContainer, bookForm, nameInpt, submitBtn, menuOpen, list, addNew, contact,
