@@ -67,6 +67,14 @@ body {
   font-weight: 700;
 }
 
+/* Set Time */
+.setTime {
+    color: #f95959;
+    text-align: right;
+    padding: 1% 2%;
+    font-weight: 600;
+}
+
 /* List Section */
 .list__section__title {
   font-size: 30px;
