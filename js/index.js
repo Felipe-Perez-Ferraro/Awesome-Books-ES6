@@ -1,4 +1,4 @@
-import { Books, printBooksToUI } from '../modules/class.js';
+import { Books, printBooksToUI, addBook, removeBook } from '../modules/class.js';
 import toggleMenu from '../modules/navbar.js';
 import {
   authorInpt, booksContainer, bookForm, nameInpt, submitBtn, menuOpen, list, addNew, contact,
@@ -16,7 +16,7 @@ showDate();
 submitBtn.addEventListener('click', (ev) => {
   ev.preventDefault();
   const aBook = new Books(Math.random, nameInpt.value, authorInpt.value);
-  aBook.addBook();
+  addBook(aBook);
   printBooksToUI();
   bookForm.reset();
   showDate();
@@ -24,7 +24,7 @@ submitBtn.addEventListener('click', (ev) => {
 
 booksContainer.addEventListener('click', (el) => {
   const rBook = new Books(Math.random, nameInpt.value, authorInpt.value);
-  rBook.removeBook(el);
+  removeBook(el, rBook);
   showDate();
 });
 
