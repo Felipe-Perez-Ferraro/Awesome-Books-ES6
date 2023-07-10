@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Awesome Books</title>
+</head>
+<body>
+    <!--Header Section-->
+    <section id="Header__section" class="header__section">
+        <header class="header__section__container">
+            <h1 class="header__navbar__title">Awesome Books</h1>
+            <nav class="header__navbar">
+                <i id="menuOpen" class="fa-solid fa-bars"></i>
+                <ul class="header__navbar__list__container">
+                    <li class="header__navbar__list__item">
+                        <a class="header__navbar__list__link list" href="" >List</a>
+                    </li>
+                    <li class="header__navbar__list__item">
+                        <a class="header__navbar__list__link add" href="" >Add New</a>
+                    </li>
+                    <li class="header__navbar__list__item">
+                        <a class="header__navbar__list__link contact" href="" ">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <!--List Section-->
+    <section id="List" class="list__section">
+        <h2 class="list__section__title">All awesome books</h2>
+        <div class="list__section__books__container" id="booksContainer">
+        <h5 class="message">There isn't any book yet...</h5>
+    </div>
+    </section>
+    
+    <!--Add New Section-->
+    <section id="AddNew" class="addNew__section">
+        <div class="addNew__form__container"> 
+            <h2 class="addNew__books__title">Add a new book</h2>
+            <form class="addNew__form" id="bookForm" action="">
+                <input 
+                    id="nameInpt" 
+                    class="addNew__field" 
+                    type="text" 
+                    name="title" 
+                    placeholder="Title..." 
+                    required
+                >
+                <input 
+                    id="authorInpt" 
+                    class="addNew__field" 
+                    type="text" 
+                    name="author" 
+                    placeholder="Author..." 
+                    required
+                > 
+                <button class="addNew__submitBtn" id="submitBtn" type="submit">Add</button>
+            </form>
+        </div>
+    </section>
+
+    <div class="errorMessage">
+        <h2 class="errorMessage__title">Please complete all the fields to set the book!!</h2>
+    </div>
+
+    <!--Contact Section-->
+    <section id="Contact" class="contact__section">
+        <h2 class="contact__section__title">Contact information</h2>
+        <p class="contact__section__paragraph">Do have any questions or you just want to say "Hello?" You can reach out to us!</p>
+        <ul class="contact__section__list__container">
+            <li class="contact__section__list__item">Our e-mail: fperezferraro@gmail.com</li>
+            <li class="contact__section__list__item">Our phone number: 5491133104318</li>
+            <li class="contact__section__list__item">Our adress: 22, 84503 City, Miami</li>
+        </ul>
+    </section>
+
+    <!--Footer Section-->
+    <footer id="Footer" class="footer__section">
+        <div class="footer__container">
+            <h2 class="footer__section__title">&#169; All rights saved, Felipe Perez Ferraro</h2>
+        </div>
+    </footer>
+
+    <script type="module" src="./js/index.js" "></script> 
+</body>
+</html>
